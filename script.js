@@ -22,7 +22,7 @@ function createGrid(size) {
       grid.style.width = `${gridSize}px`;
       grid.style.height = `${gridSize}px`;
       grid.style.boxSizing = "border-box";
-      grid.style.border = "1px solid #eee";
+      grid.style.border = "1px solid #333";
 
       grid.addEventListener("mouseenter", () => {
         grid.style.transition = "0s";
@@ -30,12 +30,17 @@ function createGrid(size) {
         const randomGreen = Math.floor(Math.random() * 256);
         const randomBlue = Math.floor(Math.random() * 256);
 
-        grid.style.backgroundColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+        const color = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+
+        grid.style.backgroundColor = color;
+
+        grid.style.boxShadow = `0 0 5px ${color}, 0 0 15px ${color}, 0 0 30px ${color}`;
       });
 
       grid.addEventListener("mouseleave", () => {
-        grid.style.backgroundColor = "white";
-        grid.style.transition = "background-color 2s";
+        grid.style.backgroundColor = "#222";
+        grid.style.transition = "background-color 2s, box-shadow 2s";
+        grid.style.boxShadow = "none";
       });
 
       container.appendChild(grid);
