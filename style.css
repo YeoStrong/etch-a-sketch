@@ -6,9 +6,17 @@
   border: 2px solid black;
 }
 
-#container div {
-  width: 60px;
-  height: 60px;
-  box-sizing: border-box;
-  border: 1px solid #eee;
+.btn {
+  font-size: 3em;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
+}
+
+.btn:hover {
+  background-color: #b1c447e3;
+  transform: translateY(-2px);
 }
