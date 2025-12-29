@@ -30,11 +30,11 @@ function createGrid(size) {
         const randomGreen = Math.floor(Math.random() * 256);
         const randomBlue = Math.floor(Math.random() * 256);
 
-        const color = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
+        const randomColor = `rgb(${randomRed}, ${randomGreen}, ${randomBlue})`;
 
-        grid.style.backgroundColor = color;
+        grid.style.backgroundColor = randomColor;
 
-        grid.style.boxShadow = `0 0 5px ${color}, 0 0 15px ${color}, 0 0 30px ${color}`;
+        grid.style.boxShadow = `0 0 5px ${randomColor}, 0 0 15px ${randomColor}, 0 0 30px ${randomColor}`;
       });
 
       grid.addEventListener("mouseleave", () => {
